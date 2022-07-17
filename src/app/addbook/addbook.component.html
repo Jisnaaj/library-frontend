@@ -1,0 +1,59 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-danger">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+<a routerLink="/book">book</a>&nbsp;
+<a routerLink="/addbook">addbook</a>&nbsp;
+<a><button routerLink="" (click)="back()" class="logout">logout</button></a>&nbsp;
+</div>
+</nav>
+<section
+  id="home"
+  [ngStyle]="{ backgroundImage: 'url(assets/images/update.jpg)' }"
+  class="d-flex flex-column justify-content-center align-items-center">
+
+  <div class='card'>
+    <form (ngSubmit)="newsubmit()">
+  <div class='card-header'>
+  {{title}}
+  </div>
+  <div class='card-body'>            
+  <div class='table-responsive'>
+    <table class='table'>       
+    
+      <tbody>  
+          <tr>
+              <td> <label> Image</label></td>
+              <td><input type="text" name="image" [(ngModel)]="bookItem.image"/></td>                  
+            </tr>   
+            <tr>
+                <td><label> Name</label></td>
+                <td><input type="text" name="p_name" [(ngModel)]="bookItem.name"/></td>                  
+              </tr>  
+  
+              <tr>
+                <td><label>Authorname</label></td>
+                <td><input type="text" name="p_code" [(ngModel)]="bookItem.authorname"/></td>                  
+              </tr> 
+  
+              <tr>
+                <td> <label> Price</label></td>
+                <td><input type="text" name="p_price" [(ngModel)]="bookItem.price"/></td>                  
+              </tr>  
+              <tr>
+                <td> <label> StarRating</label></td>
+                <td><input type="text" name="p_rating" [(ngModel)]="bookItem.starRating"/></td>                  
+              </tr>  
+               
+              <tr>
+                <td></td>
+                <td><button type="submit" class="btn btn-success">submit</button></td>                  
+              </tr>             
+      </tbody>
+    </table>
+  </div>
+  </div>
+  </form>
+  </div>
+  </section>

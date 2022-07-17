@@ -1,0 +1,52 @@
+<section
+  id="home"
+  [ngStyle]="{ backgroundImage: 'url(assets/images/update.jpg)' }"
+  class="d-flex flex-column justify-content-center align-items-center">
+  
+<div class='card'>
+    <form (ngSubmit)="editProduct()">
+<div class='card-header'>
+ Edit Your Books
+</div>
+<div class='card-body'>            
+  <div class='table-responsive'>
+    <table class='table'>       
+    
+      <tbody>  
+          <!-- <tr>
+              <td> <label>book Id</label></td>
+              <td><input type="text" name="p_id"  [(ngModel)]="productItem.productId"/></td>                  
+            </tr>    -->
+            <tr>
+                <td><label>Image</label></td>
+                <td><input type="text" name="p_image" [(ngModel)]="buk.image"/></td>                  
+              </tr>  
+              <tr>
+                <td><label>Name</label></td>
+                <td><input type="text" name="p_buk" [(ngModel)]="buk.name"/></td>                  
+              </tr>  
+              <tr>
+                <td><label>Author name</label></td>
+                <td><input type="text" name="p_name" [(ngModel)]="buk.authorname"/></td>                  
+              </tr>  
+              <tr>
+                <td><label>Price</label></td>
+                <td><input type="text" name="p_price" [(ngModel)]="buk.price"/></td>                  
+              </tr>  
+              <tr>
+                <td> <label>StarRating</label></td>
+                <td><input type="text" name="p_rate" [(ngModel)]="buk.starRating"/></td>                  
+              </tr>  
+               
+                
+              <tr>
+                <td></td>
+                <td><button type="submit" class="btn btn-danger">Update</button></td>                  
+              </tr>             
+      </tbody>
+    </table>
+  </div>
+</div>
+</form>
+</div>
+</section>

@@ -1,0 +1,56 @@
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-danger">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+  <a routerLink="/book">book</a>&nbsp;
+  <a routerLink="/addbook">addbook</a>&nbsp;
+ <a> <button routerLink="" (click)="back()" class="logout">logout</button></a>&nbsp;
+</div>
+  </nav>
+  <section
+  id="home"
+  [ngStyle]="{ backgroundImage: 'url(assets/images/bukbg.jpg)' }"
+  class="d-flex flex-column justify-content-center align-items-center">
+  
+  <div class='card box'>
+    <div class='card-header'>
+     <h3>{{title}}</h3>
+    </div>
+    
+    <div class='card-body'>            
+      <div class='table-responsive'>
+        <table class='table'>
+            
+          <thead>
+            <tr>
+             
+              <th>image</th>
+              <th>name</th>
+              <th>author name</th>
+              <th>price</th>
+              <th>5star rating</th>
+              
+            </tr>
+            </thead>
+              <tbody>
+              <tr *ngFor = "let i of buk">
+                
+               <td><img [src]="i.image" alt="image" id="img"></td>  
+               <td>{{i.name}}</td>
+                <td>{{i.authorname}}</td>
+                <td>{{i.price}}</td>
+                <td>{{i.starRating}}</td>
+                <td>
+                  <button class="btn btn-warning" style="cursor:pointer" (click)="editProduct(i)"> Edit</button>&nbsp;
+                  <button class="btn btn-danger" style="cursor:pointer"(click)="deleteProduct(i)"> Delete</button>
+                </td>
+                </tr>
+              </tbody> 
+        </table>
+      </div>
+    </div>
+</div>
+ 
+</section>

@@ -1,0 +1,30 @@
+#home{
+    height:1300px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-top: -300px;
+   
+}
+a{
+    
+    margin-left: 250px;
+    text-decoration: none;
+    color: bisque;
+}
+#img{
+    height:80px;
+    width:80px;
+}
+.card-header{
+    color: blue;
+    text-align: center;
+    font-style: italic;
+}
+.logout{
+    border: none;
+    background-color: rgb(216, 83, 83);
+    color: beige;
+
+}

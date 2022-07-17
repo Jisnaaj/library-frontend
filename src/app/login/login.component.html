@@ -1,0 +1,50 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-danger">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+    
+    <form class="form-inline">
+<a routerLink="/login" class="a">Log In</a>&nbsp;
+<a routerLink="/signup" class="a">Sign Up</a>&nbsp;
+<a routerLink="" class="a" >Home</a>
+
+</form>
+</div>
+</nav>
+
+<section
+  id="home"
+  [ngStyle]="{ backgroundImage: 'url(assets/images/losi.jpg)' }"
+  class="d-flex flex-column justify-content-center align-items-center">
+
+   <div class ="container con">
+  <h3>Log In</h3><br>
+        <form  #form="ngForm" (ngSubmit)="form.valid &&onsubmit(form.value)">
+        <label for="email" >Email</label>
+        <input type="email" class="form-control" name="eml" required #email="ngModel" [(ngModel)]="user.email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+        <label class="text-danger" *ngIf="form.submitted && email.errors?.['required'] "> enter email</label>
+        <label class="text-danger" *ngIf="form.submitted && email.errors?.['pattern']"> enter valid email</label>
+        <br><br>
+        <label for="password" >Password</label><br>
+        <input type="password" class="form-control" name="pas" required #pass="ngModel" [(ngModel)]="user.pass" pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$">
+        <label class="text-danger" *ngIf="form.submitted && pass.errors?.['required'] "> enter password</label>
+        <label class="text-danger" *ngIf="form.submitted && pass.errors?.['pattern']"> enter valid password</label>
+
+        <br><br>
+        <button type="submit"class="btn btn-warning">Log In</button><br><br>
+        <p id="pp">need an account? &nbsp; &nbsp;<a routerLink="/signup">SignUp</a></p>
+        
+    </form>
+    </div> 
+  </section>
+   
+
+
+
+
+
+
+
+
+  

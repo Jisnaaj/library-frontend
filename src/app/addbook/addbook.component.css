@@ -1,0 +1,26 @@
+#home{
+    height: 552px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+   
+}
+a{
+    
+    margin-left: 250px;
+    text-decoration: none;
+    color: bisque;
+}
+.card{
+    background-color:beige;
+}
+.card-header{
+    color:rgb(24, 100, 24);
+}
+.logout{
+    border: none;
+    background-color: rgb(216, 83, 83);
+    color: beige;
+
+}
