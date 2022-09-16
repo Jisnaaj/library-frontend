@@ -23,6 +23,8 @@ title = 'project';
     // // alert((JSON.stringify(this.user)))
     this.serv.onsubmit(data).subscribe(res=>{
       localStorage.setItem('token',res.token)
+      console.log("saved");
+      console.log(data);
       this.route.navigate(["book"]);
     })
     console.log(data);

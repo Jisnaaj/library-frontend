@@ -21,7 +21,7 @@ export class SeriveService {
 
     return this.http.post<any>("https://library-backendjisna.herokuapp.com/login",user)
     }
-
+    
     getbooks(){
       return  this.http.get("https://library-backendjisna.herokuapp.com/book");
       };
@@ -44,7 +44,7 @@ export class SeriveService {
   {
     console.log('client update')
     return this.http.put("https://library-backendjisna.herokuapp.com/update",product)
-    .subscribe(data =>{console.log(data)})
+    .subscribe(data =>{console.log(data)});
   }
 
   deleteProduct(id:any)
